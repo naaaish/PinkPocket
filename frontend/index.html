@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>PinkPocket</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <div class="page">
+    <div class="container">
+
+      <section class="hero">
+        <div>
+          <p class="badge">Personal Finance Tracker</p>
+
+          <h1>PinkPocket</h1>
+
+          <p class="subtitle">
+            A pastel pixel expense tracker for monitoring personal spending.
+          </p>
+        </div>
+
+        <div class="wallet-icon">👛</div>
+      </section>
+
+      <section class="summary-grid">
+
+        <div class="summary-card">
+          <p>Total Expense</p>
+          <h2 id="totalExpense">Rp 0</h2>
+        </div>
+
+        <div class="summary-card blue">
+          <p>Transaction Count</p>
+          <h2 id="transactionCount">0</h2>
+        </div>
+
+        <div class="summary-card wide">
+          <p>Financial Summary</p>
+          <h3 id="summaryText">No expenses recorded yet</h3>
+        </div>
+
+      </section>
+
+      <section class="panel">
+
+        <h2>Add Expense</h2>
+
+        <form id="expenseForm" class="form">
+
+          <input
+            type="text"
+            id="itemName"
+            placeholder="Item name"
+          />
+
+          <input
+            type="number"
+            id="amount"
+            placeholder="Amount"
+          />
+
+          <select id="category">
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Fashion</option>
+            <option>Education</option>
+            <option>Health</option>
+            <option>Entertainment</option>
+            <option>Other</option>
+          </select>
+
+          <input
+            type="text"
+            id="note"
+            placeholder="Note"
+          />
+
+          <button type="submit">
+            Save Expense
+          </button>
+
+        </form>
+
+      </section>
+
+      <section class="panel">
+
+        <h2>Expense List</h2>
+
+        <div id="expenseList" class="list">
+
+          <p class="empty">
+            No expense data yet.
+          </p>
+
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
