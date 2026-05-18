@@ -1,118 +1,205 @@
-# Stellar Notes DApp
+# PinkPocket
 
-**Stellar Notes DApp** - Blockchain-Based Decentralized Note-Taking System
+**PinkPocket** — Blockchain-Based Personal Expense Tracker on Stellar Soroban
 
 ## Project Description
 
-Stellar Notes DApp is a decentralized smart contract solution built on the Stellar blockchain using Soroban SDK. It provides a secure, immutable platform for managing personal notes directly on the blockchain. The contract ensures that your data is stored transparently and is only manageable through predefined smart contract functions, eliminating reliance on centralized database providers.
+PinkPocket is a decentralized personal finance tracking application built on the Stellar blockchain using the Soroban Smart Contract SDK. 
 
-The system allows users to create, view, and delete notes, leveraging the efficiency and security of the Stellar network. Each note is uniquely identified and stored within the contract's instance storage, ensuring data persistence and reliability.
+The application allows users to record, monitor, and manage personal expenses securely on-chain through a smart contract system. Instead of relying on traditional centralized databases, PinkPocket stores expense data directly within blockchain contract storage, ensuring transparency, persistence, and reliability. 
 
-## Project Vision
+Users can:
 
-Our vision is to revolutionize personal productivity in the digital age by:
+* Add expense records
+* View all stored expenses
+* Delete expenses
+* Update expense notes
+* Monitor spending summaries
 
-- **Decentralizing Data**: Moving note-taking from centralized servers to a global, distributed blockchain
-- **Ensuring Ownership**: Empowering users to have complete control and ownership over their digital thoughts and information
-- **Guaranteeing Immutability**: Providing a permanent, tamper-proof record of notes that cannot be altered or deleted by third parties
-- **Enhancing Privacy**: Leveraging blockchain security to protect personal information from unauthorized access
-- **Building Trustless Systems**: Creating a platform where data integrity is guaranteed by code, not by company promises
-
-We envision a future where digital information is truly personal and sovereign, empowering individuals with complete autonomy over their digital assets.
-
-## Key Features
-
-### 1. **Simple Note Creation**
-
-- Create notes with just one function call
-- Specify title and content for each note
-- Automated ID generation for unique identification
-- Persistent storage on the Stellar blockchain
-
-### 2. **Efficient Data Retrieval**
-
-- Fetch all stored notes in a single call
-- Structured data representation for easy frontend integration
-- Quick access to your entire note collection
-- Real-time synchronization with the blockchain state
-
-### 3. **Secure Deletion**
-
-- Remove specific notes using their unique IDs
-- Permanent removal from the contract storage
-- Clean and efficient storage management
-- Immediate update of the note list after deletion
-
-### 4. **Transparency and Security**
-
-- View all note activities on the blockchain
-- Blockchain-based verification of all storage actions
-- Immutable records of note creation and deletion
-- Protected against unauthorized modifications
-
-### 5. **Stellar Network Integration**
-
-- Leverages the high speed and low cost of Stellar
-- Built using the modern Soroban Smart Contract SDK
-- Scalable architecture for growing note collections
-- Interoperable with other Stellar-based services
-
-## Contract Details
-
-- Contract Address: CBLU4IUASQ4WUMOXBFLZRSBBLILGOH33GS4LUPKFBCCCMJCDQNMF7G2M
-  (Screenshot has been removed)
-
-## Future Scope
-
-### Short-Term Enhancements
-
-1. **Note Encryption**: Support for end-to-end encryption of note content for enhanced privacy
-2. **Category Management**: Add tags and categories to organize notes efficiently
-3. **Rich Text Support**: Extend support beyond plain text to include Markdown and formatted content
-4. **Search Functionality**: Implement advanced search filters for large note collections
-
-### Medium-Term Development
-
-5. **Collaborative Notes**: Implement multi-signature requirements for shared or collaborative note-taking
-   - Shared access for multiple addresses
-   - Permission-based editing and viewing
-   - Version history tracking
-6. **Notification System**: Off-chain bridge to alert users of new updates or shared notes
-7. **Asset Attachment**: Capability to attach digital assets or tokens to specific notes
-8. **Inter-Contract Integration**: Allow other smart contracts to interact with and store data in the notes contract
-
-### Long-Term Vision
-
-9. **Cross-Chain Synchronization**: Extend note storage to multiple blockchain networks
-10. **Decentralized UI Hosting**: Host the frontend on IPFS or similar decentralized platforms
-11. **AI-Powered Summarization**: Optional integration with AI to help users summarize their notes
-12. **Privacy Layers**: Implement zero-knowledge proofs for completely private note content
-13. **DAO Governance**: Community-driven protocol improvements and feature prioritization
-14. **Identity Management**: Integration with decentralized identity (DID) systems for user management
-
-### Enterprise Features
-
-15. **Corporate Documentation**: Adapt the system for secure corporate record-keeping
-16. **Immutable Logging**: Create time-locked logs for audit purposes
-17. **Automated Reporting**: Automatic note triggers for periodic reporting
-18. **Multi-Language Support**: Expand accessibility with internationalization
+Each expense is uniquely identified and stored within the smart contract instance storage.
 
 ---
 
-## Technical Requirements
+# Project Vision
 
-- Soroban SDK
-- Rust programming language
-- Stellar blockchain network
+PinkPocket aims to provide a simple, transparent, and decentralized solution for personal financial tracking.
 
-## Getting Started
+Our vision includes:
 
-Deploy the smart contract to Stellar's Soroban network and interact with it using the three main functions:
+* **Decentralized Financial Records**
+  Moving personal expense management from centralized systems to blockchain-based storage.
 
-- `create_note()` - Create a new note with a title and content
-- `get_notes()` - Retrieve all stored notes from the contract
-- `delete_note()` - Remove a specific note by its ID
+* **Data Ownership**
+  Giving users complete ownership and control over their financial records.
+
+* **Transparency and Reliability**
+  Ensuring expense records remain consistent and accessible through blockchain technology.
+
+* **Secure Smart Contract Storage**
+  Leveraging Soroban smart contracts to securely manage expense data.
+
+* **Modern Financial Awareness**
+  Encouraging users to monitor and understand their spending habits effectively.
 
 ---
 
-**Stellar Notes DApp** - Securing Your Thoughts on the Blockchain
+# Key Features
+
+## 1. Expense Management
+
+* Create expense records with:
+
+  * Item name
+  * Amount
+  * Category
+  * Additional notes
+* Automatically generates unique IDs for every expense
+* Persistent blockchain storage
+
+---
+
+## 2. Expense Retrieval
+
+* Retrieve all recorded expenses
+* Structured data format for frontend integration
+* Expense data retrieval through smart contract functions
+
+---
+
+## 3. Expense Deletion
+
+* Delete expense records using unique IDs
+* Immediate updates to stored expense lists
+* Efficient contract storage management
+
+---
+
+## 4. Expense Note Update
+
+* Modify additional notes for existing expenses
+* Flexible record management
+* Simple update mechanism through smart contract functions
+
+---
+
+## 5. Financial Summary
+
+* Calculate total expenses
+* Count recorded transactions
+* Generate simple spending activity summaries
+
+---
+
+## 6. Stellar Soroban Integration
+
+* Built using Soroban Smart Contracts
+* Powered by the Stellar blockchain network
+* Low transaction cost and efficient execution
+* Compatible with Stellar ecosystem tools
+
+---
+
+# Contract Functions
+
+The smart contract provides the following functions:
+
+| Function                  | Description                         |
+| ------------------------- | ----------------------------------- |
+| `create_expense()`        | Create a new expense record         |
+| `get_expenses()`          | Retrieve all expenses               |
+| `delete_expense()`        | Delete an expense by ID             |
+| `update_expense_note()`   | Update expense notes                |
+| `get_total_expense()`     | Calculate total expenses            |
+| `get_expense_count()`     | Count total transactions            |
+| `get_financial_summary()` | Generate financial activity summary |
+
+---
+
+# Technical Requirements
+
+* Rust Programming Language
+* Soroban SDK
+* Stellar Blockchain Network
+
+---
+
+# Project Status
+
+| Component | Status |
+|---|---|
+| Smart Contract | Completed and deployed on Stellar Soroban Testnet |
+| Frontend UI | Completed as a prototype interface |
+| Frontend-Contract Integration | In development |
+| Wallet Integration | Planned |
+
+---
+
+# Future Enhancements
+
+## Short-Term Development
+
+1. Expense categories with analytics visualization
+2. Monthly financial reports
+3. Budget planning system
+4. Search and filtering features
+5. Transaction history export
+
+---
+
+## Medium-Term Development
+
+6. Wallet-based authentication
+7. Frontend integration with Freighter Wallet
+8. Real-time smart contract interaction
+9. Spending trend analysis
+10. Multi-user expense management
+
+---
+
+## Long-Term Vision
+
+11. AI-based spending recommendations
+12. Cross-device synchronization
+13. Decentralized cloud backup
+14. Mobile application support
+15. Advanced financial dashboards
+
+---
+
+# Getting Started
+
+Deploy the PinkPocket smart contract to the Stellar Soroban network and interact with the provided contract functions.
+
+The project also includes a web-based frontend prototype designed to represent user interaction with the PinkPocket smart contract.
+
+---
+
+# Contract Information
+
+| Item | Detail |
+|---|---|
+| Contract Alias | `PinkPocket` |
+| Blockchain Network | Stellar Soroban Testnet |
+| Contract Status | Deployed |
+| Contract ID | `CDJYVWVQGG5HYCPRY2VQR6WKUHMECRGEOUTS6UTM2TP26XF7PJ2G4RGD` |
+
+---
+
+# Testnet Environment
+
+PinkPocket currently operates on the Stellar Soroban Testnet environment for development and testing purposes.
+
+---
+
+# Tech Stack
+
+* Soroban Smart Contract
+* Rust
+* Stellar Blockchain
+* HTML
+* CSS
+* JavaScript
+
+---
+
+**PinkPocket** — Cute Interface, Smarter Spending.
